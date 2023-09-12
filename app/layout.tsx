@@ -4,7 +4,7 @@ import { Jost } from 'next/font/google'
 
 const jost = Jost({
   subsets:['latin'],
-  weight:['400','500']
+  weight:['400','500','100','200','300']
 })
 
 
@@ -19,7 +19,7 @@ export default function RootLayout({
       <div className='main'>
         <div className='gradient' />
       </div>
-      <main className='app'>
+      <main className={jost.className}>
         <Navbar />
           {children}
         </main>

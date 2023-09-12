@@ -18,7 +18,8 @@ const config: Config = {
       'white':' #FFFFFF',
       'lightPeach':' #FFAD9B',
       'darkGray':'#333136',
-      'lightGray':'#F1F3F5'
+      'lightGray':'#F1F3F5',
+      'trans':'#00000099'
       }
     },
   },

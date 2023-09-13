@@ -19,7 +19,8 @@ const config: Config = {
       'lightPeach':' #FFAD9B',
       'darkGray':'#333136',
       'lightGray':'#F1F3F5',
-      'trans':'#00000099'
+      'trans':'#00000099',
+      'seashell':'#FDF3F0'
       }
     },
   },

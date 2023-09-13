@@ -125,7 +125,7 @@ export default function Home() {
   )
 }
 
-function Footer(){
+export function Footer(){
 return (
   <div className='bg-black mt-4'>
     <div className='flex justify-center items-center py-8 flex-col'>

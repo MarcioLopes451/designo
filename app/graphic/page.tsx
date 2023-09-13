@@ -4,7 +4,7 @@ import Change from '../../assets/graphic-design/desktop/image-change.jpg';
 import Boxed from '../../assets/graphic-design/desktop/image-boxed-water.jpg';
 import Science from '../../assets/graphic-design/desktop/image-science.jpg';
 import Web from '../../assets/home/mobile/image-web-design.jpg';
-//import Graphic from '../../assets/home/mobile/image-graphic-design.jpg';
+import App from '../../assets/home/mobile/image-app-design.jpg';
 import Arrow from '../../assets/shared/desktop/icon-right-arrow.svg';
 import ThreeCircles from '../../assets/shared/desktop/bg-pattern-three-circles.svg';
 import { Footer } from '../page';
@@ -15,8 +15,8 @@ export const links = [
     text:'VIEW PROJECTS',
   },
   {
-    Name:'GRAPHIC DESIGN',
-    image: '',
+    Name:'APP DESIGN',
+    image: App,
     text:'VIEW PROJECTS',
   },
 ]

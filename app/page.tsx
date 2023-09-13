@@ -1,3 +1,4 @@
+
 import Hero from '../assets/home/desktop/image-hero-phone.png';
 import Circle from '../assets/home/desktop/bg-pattern-hero-home.svg';
 import Web from '../assets/home/mobile/image-web-design.jpg';
@@ -16,7 +17,6 @@ import Twitter from '../assets/shared/desktop/icon-twitter.svg';
 import Pinterest from '../assets/shared/desktop/icon-pinterest.svg';
 import Instagram from '../assets/shared/desktop/icon-instagram.svg';
 import Image from 'next/image';
-
 export const links = [
   {
     Name:'WEB DESIGN',
@@ -121,6 +121,7 @@ export default function Home() {
           </div>
         </div>
         <Footer />
+       
     </main>
   )
 }

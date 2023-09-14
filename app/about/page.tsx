@@ -44,7 +44,34 @@ export default function About() {
                 </div>
             </div>
         </div>
+        <Locate />
+        <div className='mt-10'>
+            <div className='flex justify-center items-center flex-col flex-wrap'>
+                <Image src={Real} alt='real'/>
+                <div className='bg-seashell'>
+                    <div className='flex justify-center items-center flex-col flex-wrap text-center my-16'>
+                        <h2 className='text-3xl text-peach'>The Real Deal</h2>
+                        <p className='mt-5 font-light px-6'>
+                        As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own.
+                        Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective 
+                        to every opportunity. We make design and technology more accessible and give you tools to measure success.
+                        <br />
+                        <br />
+                        We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, 
+                        we inspire audiences to take action and drive real results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <Talk />
+        <Footer />
+    </div>
+  )
+}
 
+export function Locate(){
+    return (
         <div className='mt-10'>
             <div className='flex flex-col justify-center items-center gap-20'>
                 <div className='relative text-center'>
@@ -73,28 +100,5 @@ export default function About() {
                 </div>
             </div>
         </div>
-
-        <div className='mt-10'>
-            <div className='flex justify-center items-center flex-col flex-wrap'>
-                <Image src={Real} alt='real'/>
-                <div className='bg-seashell'>
-                    <div className='flex justify-center items-center flex-col flex-wrap text-center my-16'>
-                        <h2 className='text-3xl text-peach'>The Real Deal</h2>
-                        <p className='mt-5 font-light px-6'>
-                        As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own.
-                        Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective 
-                        to every opportunity. We make design and technology more accessible and give you tools to measure success.
-                        <br />
-                        <br />
-                        We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, 
-                        we inspire audiences to take action and drive real results.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <Talk />
-        <Footer />
-    </div>
-  )
+    )
 }

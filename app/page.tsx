@@ -107,25 +107,28 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        <div className='mt-10 flex justify-center items-center'>
-          <div className='bg-peach relative w-80 h-96 flex justify-center items-center rounded-lg text-white flex-col'>
-            <Image src={ThreeCircles} alt='three' className='absolute top-0 w-96'/>
-            <h2 className='text-4xl text-center px-10'>Let’s talk about your project</h2>
-            <p className='px-4 text-center mt-4'>
-            Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
-            </p>
-            <button className="bg-white text-black w-40 h-14 rounded-lg mt-6 font-medium tracking-wider">
-              GET IN TOUCH
-            </button>
-          </div>
-        </div>
+        <Talk />
         <Footer />
        
     </main>
   )
 }
-
+export function Talk(){
+  return (
+    <div className='mt-10 flex justify-center items-center'>
+    <div className='bg-peach relative w-80 h-96 flex justify-center items-center rounded-lg text-white flex-col'>
+      <Image src={ThreeCircles} alt='three' className='absolute top-0 w-96'/>
+      <h2 className='text-4xl text-center px-10'>Let’s talk about your project</h2>
+      <p className='px-4 text-center mt-4'>
+      Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
+      </p>
+      <button className="bg-white text-black w-40 h-14 rounded-lg mt-6 font-medium tracking-wider">
+        GET IN TOUCH
+      </button>
+    </div>
+  </div>
+  )
+}
 export function Footer(){
 return (
   <div className='bg-black mt-4'>

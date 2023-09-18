@@ -1,20 +1,39 @@
-import React from 'react';
+'use client'
+import React, { useEffect, useState } from 'react';
 import MobileAbout from '../../assets/about/mobile/image-about-hero.jpg';
+import TabletAbout from '../../assets/about/tablet/image-about-hero.jpg';
 import Talent from '../../assets/about/mobile/image-world-class-talent.jpg';
+import TabletTalent from '../../assets/about/tablet/image-world-class-talent.jpg';
 import Canada from '../../assets/shared/desktop/illustration-canada.svg';
 import Australia from '../../assets/shared/desktop/illustration-australia.svg';
 import UK from '../../assets/shared/desktop/illustration-united-kingdom.svg';
 import SmallCircle from '../../assets/shared/desktop/bg-pattern-small-circle.svg';
 import Real from '../../assets/about/mobile/image-real-deal.jpg';
-import { Talk, Footer } from '../page';
+import TabletReal from '../../assets/about/tablet/image-real-deal.jpg';
+import { Talk, Footer,TabletFooter } from '../page';
 import Image from 'next/image';
 
+
 export default function About() {
+    
+    const [width, setWidth] = useState(window.innerWidth);
+    const breakPoint = 768;
+    const med = 1024;
+
+
+    useEffect(() => {
+        const handleResizeWindow = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResizeWindow);
+        return () => {
+            window.removeEventListener('resize', handleResizeWindow);
+        };
+    }, []);
   return (
     <div className='mt-10'>
         <div className='flex justify-center items-center flex-col flex-wrap'>
-            <Image src={MobileAbout} alt='hero'/>
-            <div className='bg-peach w-full'>
+            {width < breakPoint ? <Image src={MobileAbout} alt='hero'/> 
+            : <Image src={TabletAbout} alt='tablet' className='w-[43rem] rounded-lg'/>}
+            <div className='bg-peach w-full md:w-[43rem] -mt-3 rounded-lg'>
                 <div className='flex justify-center items-center flex-col text-center my-16 text-white'>
                     <h2 className='text-3xl'>About Us</h2>
                     <p className='mt-5 font-light px-6'>
@@ -26,8 +45,9 @@ export default function About() {
                     </p>
                 </div>
             </div>
-            <Image src={Talent} alt='talent'/>
-            <div className='bg-seashell'>
+            {width < breakPoint ? <Image src={Talent} alt='talent'/> : 
+            <Image src={TabletTalent} alt='tablet' className='mt-20 rounded-lg w-[43rem]'/>}
+            <div className='bg-seashell md:w-[43rem] -mt-3 rounded-lg'>
                 <div className='flex justify-center items-center flex-col my-14'>
                     <h2 className='text-peach text-3xl'>World-class talent</h2>
                     <p className='font-light text-sm text-center px-5 mt-5'>
@@ -47,8 +67,9 @@ export default function About() {
         <Locate />
         <div className='mt-10'>
             <div className='flex justify-center items-center flex-col flex-wrap'>
-                <Image src={Real} alt='real'/>
-                <div className='bg-seashell'>
+               {width < breakPoint ? <Image src={Real} alt='real'/> : 
+               <Image src={TabletReal} alt='tablet' className='mt-20 rounded-lg w-[43rem]'/>}
+                <div className='bg-seashell md:w-[43rem] -mt-3 rounded-lg'>
                     <div className='flex justify-center items-center flex-col flex-wrap text-center my-16'>
                         <h2 className='text-3xl text-peach'>The Real Deal</h2>
                         <p className='mt-5 font-light px-6'>
@@ -65,7 +86,7 @@ export default function About() {
             </div>
         </div>
         <Talk />
-        <Footer />
+        {width < breakPoint ? <Footer /> : <TabletFooter />}
     </div>
   )
 }

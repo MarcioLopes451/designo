@@ -6,6 +6,7 @@ import Image from 'next/image';
 import MobileNav from './MobileNav';
 import Close from '../assets/shared/mobile/icon-close.svg';
 import Backdrop from './Backdrop';
+import Link from 'next/link';
 
 
 export default function Navbar() {
@@ -17,12 +18,24 @@ export default function Navbar() {
 
   return (
     <div className='w-full'>
-        <div className='flex justify-between items-center px-6 mt-10'>
-           <Image src={Logo} alt='/' className='w-48'/>
+        <div className='flex justify-between items-center px-6 mt-10 md:px-10'>
+           <Image src={Logo} alt='/' className='w-48 md:w-36'/>
+           <div className='hidden md:flex gap-6 text-black px-6 font-light tracking-widest text-sm'>
+                <Link href='/'>
+                    OUR COMPANY
+                </Link>
+                <Link href='/'>
+                   LOCATIONS
+                </Link>
+                <Link href='/'>
+                    CONTACT
+                </Link>
+                </div>
            {state ?  
            <Image src={Close} onClick={handleClick} alt=""/> 
            : 
-           <Image src={mobileNav} alt='/' onClick={handleClick}/> }
+           <Image src={mobileNav} alt='/' onClick={handleClick} className='md:hidden'/> }
+           
         </div>
         <MobileNav isOpen={state} onClose={handleClick}/>
         {state && <Backdrop isOpen={state} onClose={handleClick}/>}

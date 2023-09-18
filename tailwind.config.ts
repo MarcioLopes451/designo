@@ -21,7 +21,7 @@ const config: Config = {
       'lightGray':'#F1F3F5',
       'trans':'#00000099',
       'seashell':'#FDF3F0'
-      }
+      },
     },
   },
   plugins: [],

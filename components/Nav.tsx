@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <div className='w-full'>
-        <div className='flex justify-between items-center px-6 mt-10 md:px-10'>
+        <div className='flex justify-between items-center px-6 mt-10 md:px-10 xl:px-40'>
            <Image src={Logo} alt='/' className='w-48 md:w-36'/>
            <div className='hidden md:flex gap-6 text-black px-6 font-light tracking-widest text-sm'>
                 <Link href='/'>

@@ -1,6 +1,7 @@
+
 'use client'
 import React, { useEffect, useState } from 'react'
-import { Locate } from '../page';
+import { Locate } from '@/components/context';
 import { Footer,TabletFooter} from '../page';
 
 export default function Contact() {

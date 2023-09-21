@@ -1,3 +1,4 @@
+
 'use client'
 import React, { useEffect, useState } from 'react';
 import MobileAbout from '../../assets/about/mobile/image-about-hero.jpg';
@@ -13,7 +14,8 @@ import SmallCircle from '../../assets/shared/desktop/bg-pattern-small-circle.svg
 import Real from '../../assets/about/mobile/image-real-deal.jpg';
 import TabletReal from '../../assets/about/tablet/image-real-deal.jpg';
 import DesktopReal from '../../assets/about/desktop/image-real-deal.jpg';
-import { Talk, Footer,TabletFooter, Locate } from '../page';
+import { Talk, Footer,TabletFooter,} from '../page';
+import { Locate } from '@/components/context';
 import Image from 'next/image';
 
 

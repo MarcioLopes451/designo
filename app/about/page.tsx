@@ -76,7 +76,7 @@ export default function About() {
             </div>
             
         </div>
-        <Locate />
+       
         <div className='mt-20'>
             <div className='flex justify-center items-center flex-col flex-wrap xl:flex xl:flex-row-reverse xl:h-[40rem]'>
                {width < breakPoint ? <Image src={Real} alt='real'/> : 

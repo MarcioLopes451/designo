@@ -108,7 +108,7 @@ export default function About() {
 export function Locate(){
     return (
         <div className='mt-32'>
-            <div className='flex flex-col justify-center items-center gap-20 xl:flex-row xl:justify-evenly'>
+            <div className='flex flex-col justify-center items-center gap-20 xl:flex-row xl:gap-56'>
                 <div className='relative text-center'>
                     <Image src={Canada} alt='canada'/>
                     <Image src={SmallCircle} alt='circles' className='absolute top-0'/>

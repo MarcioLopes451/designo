@@ -1,16 +1,14 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Canada from '../../assets/locations/desktop/image-map-canada.png';
-
 import TabletCanada from '../../assets/locations/tablet/image-map-canada.png';
 import TabletUk from '../../assets/locations/tablet/image-map-uk.png';
 import TabletAustralia from '../../assets/locations/tablet/image-map-australia.png';
-
 import Australia from '../../assets/locations/desktop/image-map-australia.png';
 import Uk from '../../assets/locations/desktop/image-map-united-kingdom.png';
 import { Talk, Footer, TabletFooter } from '../page';
 import Image from 'next/image';
-import { IMAGES_MANIFEST } from 'next/dist/shared/lib/constants';
+
 
 export default function Locations() {
     const [width, setWidth] = useState(window.innerWidth);
@@ -29,10 +27,10 @@ export default function Locations() {
   return (
     <div className='mt-10'>
        <div className='flex justify-center items-center flex-col flex-wrap gap-10'>
-        <div>
-            {width < breakPoint ? <Image src={Canada} alt='canada'/> : 
-            <Image src={TabletCanada} alt='tab' className='rounded-lg'/>}
-            <div className='bg-seashell w-full md:mt-10 rounded-lg'>
+        <div className='xl:flex flex-row-reverse items-center justify-center gap-9'>
+            {width < breakPoint ? <Image src={Canada} alt='canada'/> : width >= breakPoint && width < med ?
+            <Image src={TabletCanada} alt='tab' className='rounded-lg'/> :  <Image src={Canada} alt='canada' className='h-80 rounded-lg'/>}
+            <div className='bg-seashell w-full md:mt-10 rounded-lg xl:mt-0 xl:w-[45rem] xl:h-80'>
                 <div className='flex flex-col items-center justify-center md:items-start px-16'>
                     <h2 className='text-3xl text-peach mt-10'>Canada</h2>
                 <div className='font-light px-6 text-center my-9 md:flex flex-row items-center justify-center gap-14 md:px-0 md:text-left'>
@@ -48,9 +46,10 @@ export default function Locations() {
             </div>
         </div>
 
-        <div>
-            {width < breakPoint ? <Image src={Australia} alt='Australia'/> : <Image src={TabletAustralia} alt='tab'/>}
-            <div className='bg-seashell w-full'>
+        <div className='xl:flex flex-row items-center justify-center gap-9'>
+            {width < breakPoint ? <Image src={Australia} alt='Australia'/> : width >= breakPoint && width < med ?
+             <Image src={TabletAustralia} alt='tab'/> : <Image src={Australia} alt='Australia' className='h-80 rounded-lg'/> }
+            <div className='bg-seashell w-full xl:mt-0 xl:w-[45rem] xl:h-80 rounded-lg'>
             <div className='flex flex-col items-center justify-center md:items-start px-16 md:mt-10'>
                     <h2 className='text-3xl text-peach mt-10'>Australia</h2>
                 <div className='font-light px-6 text-center my-9 md:flex flex-row items-center justify-center gap-14 md:px-0 md:text-left'>
@@ -65,9 +64,10 @@ export default function Locations() {
                 </div>
         </div>
         </div>
-        <div>
-           {width < breakPoint ? <Image src={Uk} alt='uk'/> : <Image src={TabletUk} alt='tab'/>}
-            <div className='bg-seashell w-full'>
+        <div className='xl:flex flex-row-reverse items-center justify-center gap-9'>
+           {width < breakPoint ? <Image src={Uk} alt='uk'/> :  width >= breakPoint && width < med ?
+            <Image src={TabletUk} alt='tab'/> : <Image src={Uk} alt='uk' className='h-80 rounded-lg'/>}
+            <div className='bg-seashell w-full xl:mt-0 xl:w-[45rem] xl:h-80 rounded-lg'>
             <div className='flex flex-col items-center justify-center md:items-start px-16 md:mt-10'>
                     <h2 className='text-3xl text-peach mt-10'>United Kingdom</h2>
                 <div className='font-light px-6 text-center my-9 md:flex flex-row items-center justify-center gap-14 md:px-0 md:text-left'>

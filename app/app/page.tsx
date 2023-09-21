@@ -11,7 +11,9 @@ import Graphic from '../../assets/home/mobile/image-graphic-design.jpg';
 import Arrow from '../../assets/shared/desktop/icon-right-arrow.svg';
 import ThreeCircles from '../../assets/shared/desktop/bg-pattern-three-circles.svg';
 import { Talk, Footer, TabletFooter} from '../page';
-export const links = [
+
+
+const links = [
   {
     Name:'WEB DESIGN',
     image: Web,

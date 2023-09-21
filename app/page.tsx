@@ -24,7 +24,7 @@ import UK from '../assets/shared/desktop/illustration-united-kingdom.svg';
 import { useEffect, useState } from 'react';
 
 
-export const links = [
+const links = [
   {
     Name:'WEB DESIGN',
     image: Web,

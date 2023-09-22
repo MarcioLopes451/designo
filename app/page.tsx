@@ -39,21 +39,31 @@ const links = [
   },
 ]
 
-export default function Home() {
-
-  const [width, setWidth] = useState(window.innerWidth);
-    const breakPoint = 768;
+const breakPoint = 768;
     const med = 1024;
     const large = 1440
 
+export default function Home() {
 
-    useEffect(() => {
-        const handleResizeWindow = () => setWidth(window.innerWidth);
-        window.addEventListener('resize', handleResizeWindow);
-        return () => {
-            window.removeEventListener('resize', handleResizeWindow);
-        };
-    }, []);
+  const [width, setWidth] = useState(0)
+  const [height, setHeight] = useState(0)
+  const breakPoint = 768;
+    const med = 1024;
+    const large = 1440
+
+  const handleWindowResize = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    // component is mounted and window is available
+    handleWindowResize();
+    window.addEventListener('resize', handleWindowResize);
+    // unsubscribe from the event on component unmount
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, []);
+
   return (
     <main className="mt-9 md:flex flex-col justify-center items-center">
       <div className='text-center pt-20 px-7 text-white relative w-full bg-peach md:w-[43rem] rounded-lg xl:w-[69rem] xl:flex items-center xl:pt-6'>

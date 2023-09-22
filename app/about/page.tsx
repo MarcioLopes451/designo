@@ -14,8 +14,10 @@ import SmallCircle from '../../assets/shared/desktop/bg-pattern-small-circle.svg
 import Real from '../../assets/about/mobile/image-real-deal.jpg';
 import TabletReal from '../../assets/about/tablet/image-real-deal.jpg';
 import DesktopReal from '../../assets/about/desktop/image-real-deal.jpg';
-import { Talk, Footer,TabletFooter,} from '../page';
-import { Locate } from '@/components/context';
+import { Footer } from '@/components/Footer';
+import { TabletFooter } from '@/components/TabletFooter';
+import { Talk } from '@/components/Talk';
+import { Locations } from '@/components/Locations';
 import Image from 'next/image';
 
 

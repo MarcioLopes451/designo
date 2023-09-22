@@ -1,4 +1,3 @@
-
 'use client'
 import Hero from '../assets/home/desktop/image-hero-phone.png';
 import Circle from '../assets/home/desktop/bg-pattern-hero-home.svg';
@@ -11,17 +10,14 @@ import Resourceful from '../assets/home/desktop/illustration-resourceful.svg';
 import Friendly from '../assets/home/desktop/illustration-friendly.svg';
 import SmallCircle from '../assets/shared/desktop/bg-pattern-small-circle.svg';
 import ThreeCircles from '../assets/shared/desktop/bg-pattern-three-circles.svg';
-import Logo from '../assets/shared/desktop/logo-light.png';
-import Facebook from '../assets/shared/desktop/icon-facebook.svg';
-import Youtube from '../assets/shared/desktop/icon-youtube.svg';
-import Twitter from '../assets/shared/desktop/icon-twitter.svg';
-import Pinterest from '../assets/shared/desktop/icon-pinterest.svg';
-import Instagram from '../assets/shared/desktop/icon-instagram.svg';
 import Image from 'next/image';
 import DesktopWeb from '../assets/home/desktop/image-web-design-large.jpg';
 import Canada from '../assets/shared/desktop/illustration-canada.svg';
 import Australia from '../assets/shared/desktop/illustration-australia.svg';
 import UK from '../assets/shared/desktop/illustration-united-kingdom.svg';
+import { Talk } from '@/components/Talk';
+import { Footer } from '@/components/Footer';
+import { TabletFooter } from '@/components/TabletFooter';
 import { useEffect, useState } from 'react';
 
 
@@ -181,90 +177,5 @@ export default function Home() {
   )
 }
 
-export function Talk(){
-  return (
-    <div className='mt-20 flex justify-center items-center bg-peach flex-col'>
-    <div className='relative w-80 h-96 flex justify-center items-center rounded-lg
-     text-white flex-col md:w-[43rem] md:h-80 xl:w-[69rem]'>
-      <h2 className='text-4xl text-center px-10 md:px-56'>Let’s talk about your project</h2>
-      <p className='px-4 text-center mt-4 md:w-[32rem]'>
-      Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
-      </p>
-      <button className="bg-white text-black w-40 h-14 rounded-lg mt-6 font-medium tracking-wider">
-        GET IN TOUCH
-      </button>
-    </div>
-    
-  </div>
-  )
-}
-
-export function Footer(){
-return (
-  <div className='bg-black mt-4 md:w-full'>
-    <div className='flex justify-center items-center py-8 flex-col'>
-      <Image src={Logo} alt='/' className='w-48'/>
-      <div className='flex flex-col justify-center items-center mt-7 border-t-2 border-white gap-8 text-white'>
-        <p className='mt-10'>OUR COMPANY</p>
-        <p>LOCATIONS</p>
-        <p>CONTACT</p>
-        <div className='flex flex-col justify-center items-center'>
-          <p>Designo Central Office</p>
-          <p>3886 Wellington Street</p>
-          <p>Toronto, Ontario M9C 3J5</p>
-        </div>
-        <div className='flex flex-col justify-center items-center'>
-          <p>Contact Us (Central Office)</p>
-          <p>P : +1 253-863-8967</p>
-          <p>M : contact@designo.co</p>
-        </div>
-        <div className='flex justify-center items-center gap-4'>
-        <Image src={Facebook} alt='/'/>
-        <Image src={Youtube} alt='/'/>
-        <Image src={Twitter} alt='/'/>
-        <Image src={Pinterest} alt='/'/>
-        <Image src={Instagram} alt='/'/>
-        </div>
-      </div>
-    </div>
-  </div>
-)
-}
-
-export function TabletFooter(){
-  return (
-    <div className='bg-black w-full mt-10'>
-      <div className='flex flex-col justify-around gap-8 text-white px-9'>
-        <div className='flex justify-between items-center py-16'>
-        <Image src={Logo} alt='/' className='w-48'/>
-        <div className='flex justify-between items-center gap-6'>
-        <p>OUR COMPANY</p>
-        <p>LOCATIONS</p>
-        <p>CONTACT</p>
-        </div>
-        </div>
-        <div className='flex justify-between my-9'>
-        <div className='flex flex-col justify-center items-center'>
-          <p>Designo Central Office</p>
-          <p>3886 Wellington Street</p>
-          <p>Toronto, Ontario M9C 3J5</p>
-        </div>
-        <div className='flex flex-col justify-center items-center'>
-          <p>Contact Us (Central Office)</p>
-          <p>P : +1 253-863-8967</p>
-          <p>M : contact@designo.co</p>
-        </div>
-        <div className='flex justify-center items-center gap-4'>
-        <Image src={Facebook} alt='/'/>
-        <Image src={Youtube} alt='/'/>
-        <Image src={Twitter} alt='/'/>
-        <Image src={Pinterest} alt='/'/>
-        <Image src={Instagram} alt='/'/>
-        </div>
-        </div>
-      </div>
-    </div>
-  )
-}
 
 

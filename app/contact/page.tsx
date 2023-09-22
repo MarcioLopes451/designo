@@ -1,8 +1,9 @@
-
 'use client'
 import React, { useEffect, useState } from 'react'
-import { Locate } from '@/components/context';
-import { Footer,TabletFooter} from '../page';
+import { Locations } from '@/components/Locations';
+import { Footer } from '@/components/Footer';
+import { TabletFooter } from '@/components/TabletFooter';
+
 
 export default function Contact() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -73,7 +74,7 @@ export default function Contact() {
                 </div>
             </form>
         </div>
-        <Locate />
+        <Locations />
         {width < breakPoint ? <Footer /> : <TabletFooter />}
     </div>
   )

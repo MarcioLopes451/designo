@@ -1,11 +1,10 @@
-
 import Image from "next/image"
 import Canada from '../assets/shared/desktop/illustration-canada.svg';
 import Australia from '../assets/shared/desktop/illustration-australia.svg';
 import UK from '../assets/shared/desktop/illustration-united-kingdom.svg';
 import SmallCircle from '../assets/shared/desktop/bg-pattern-small-circle.svg';
 
-export function Locate(){
+export function Locations(){
     return (
         <div className='mt-32'>
             <div className='flex flex-col justify-center items-center gap-20 xl:flex-row xl:gap-56'>

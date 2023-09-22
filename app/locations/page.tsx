@@ -6,7 +6,9 @@ import TabletUk from '../../assets/locations/tablet/image-map-uk.png';
 import TabletAustralia from '../../assets/locations/tablet/image-map-australia.png';
 import Australia from '../../assets/locations/desktop/image-map-australia.png';
 import Uk from '../../assets/locations/desktop/image-map-united-kingdom.png';
-import { Talk, Footer, TabletFooter } from '../page';
+import { Footer } from '@/components/Footer';
+import { TabletFooter } from '@/components/TabletFooter';
+import { Talk } from '@/components/Talk';
 import Image from 'next/image';
 
 

@@ -1,4 +1,3 @@
-
 'use client'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
@@ -9,7 +8,9 @@ import Web from '../../assets/home/mobile/image-web-design.jpg';
 import App from '../../assets/home/mobile/image-app-design.jpg';
 import Arrow from '../../assets/shared/desktop/icon-right-arrow.svg';
 import ThreeCircles from '../../assets/shared/desktop/bg-pattern-three-circles.svg';
-import { Talk, Footer, TabletFooter} from '../page';
+import { Footer } from '@/components/Footer';
+import { TabletFooter } from '@/components/TabletFooter';
+import { Talk } from '@/components/Talk';
 
  const links = [
   {

@@ -66,21 +66,23 @@ export default function Home() {
 
   return (
     <main className="mt-9 md:flex flex-col justify-center items-center">
-      <div className='text-center pt-20 px-7 text-white relative w-full bg-peach md:w-[43rem] rounded-lg xl:w-[69rem] xl:flex items-center xl:pt-6'>
-        <div>
-        <h2 className='text-3xl md:text-5xl px-10'>
+      <div className='text-center pt-20 px-7 text-white relative w-full bg-peach md:w-[43rem] rounded-lg 
+      xl:w-[69rem] xl:flex items-center xl:pt-6 xl:h-[40rem]'>
+        <div className='xl:ml-10'>
+        <h2 className='text-3xl md:text-5xl px-10 xl:px-0 xl:text-left'>
           Award-winning custom designs and digital branding solutions
         </h2>
-        <p className="mt-5 font-light md:px-24 text-base">
+        <p className="mt-5 font-light md:px-24 text-base xl:px-0 xl:text-left">
         With over 10 years in the industry, we are experienced in creating fully 
         responsive websites, app design, and engaging brand experiences. 
         Find out more about our services.
         </p>
-        <button className="bg-white text-black w-40 h-14 rounded-lg mt-6 font-medium tracking-wider">
+        <button className="bg-white text-black w-40 h-14 rounded-lg mt-6 font-medium tracking-wider 
+        xl:flex items-center justify-center hover:bg-lightPeach hover:text-white">
           LEARN MORE
         </button>
         </div>
-        <Image src={Hero} alt='hero'/>
+        <Image src={Hero} alt='hero' className='xl:w-[30rem]'/>
       </div>
       <div className='bg-white'>
 
@@ -89,7 +91,7 @@ export default function Home() {
             <div key={key}>
               <div className='relative'>
               <Image src={data.image} alt='links' className='w-80 h-64 rounded-2xl md:w-[43rem]'/>
-              <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-2xl'>
+              <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-2xl hover:bg-[#e7816b99]'>
                 <div className='mt-20 flex justify-center flex-col gap-3 items-center'>
                 <h2 className='text-3xl tracking-wide'>{data.Name}</h2>
                 <p className='tracking-widest flex items-center gap-5'>
@@ -105,7 +107,7 @@ export default function Home() {
         <div className='flex justify-center items-center flex-row flex-wrap gap-10 pt-6'>
           <div className='relative'>
             <Image src={DesktopWeb} alt='web' className='rounded-lg'/>
-            <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-2xl'>
+            <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-lg hover:bg-[#e7816b99]'>
                 <div className='flex justify-center flex-col gap-3 items-center mt-64'>
                 <h2 className='text-3xl tracking-wide'>WEB DESIGN</h2>
                 <p className='tracking-widest flex items-center gap-5'>
@@ -119,7 +121,7 @@ export default function Home() {
           <div className='flex flex-col flex-wrap gap-9'>
             <div className='relative'>
             <Image src={App} alt='web' className='rounded-lg w-[33rem] h-[19rem]'/>
-            <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-2xl'>
+            <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-lg hover:bg-[#e7816b99]'>
                 <div className='flex justify-center flex-col gap-3 items-center mt-32'>
                 <h2 className='text-3xl tracking-wide'>APP DESIGN</h2>
                 <p className='tracking-widest flex items-center gap-5'>
@@ -131,7 +133,7 @@ export default function Home() {
             </div>
             <div className='relative'>
             <Image src={Graphic} alt='web' className='rounded-lg w-[33rem] h-[19rem]'/>
-            <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-2xl'>
+            <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-lg hover:bg-[#e7816b99]'>
                 <div className='flex justify-center flex-col gap-3 items-center mt-32'>
                 <h2 className='text-3xl tracking-wide'>GRAPHIC DESIGN</h2>
                 <p className='tracking-widest flex items-center gap-5'>
@@ -144,8 +146,8 @@ export default function Home() {
           </div>
           </div>}
         </div>
-        <div className='mt-10 bg-white'>
-          <div className='flex justify-center items-center flex-col flex-wrap gap-12 xl:flex-row xl:flex-nowrap'>
+        <div className='mt-10'>
+          <div className='flex justify-center items-center flex-col flex-wrap gap-10 xl:flex-row xl:flex-nowrap xl:gap-0'>
             <div className='flex justify-center items-center flex-col relative md:flex-row gap-10 px-6 xl:flex-col'>
               <Image src={Passionate} alt='passionate'/>
               <Image src={SmallCircle} alt='circle' className='absolute top-0 md:left-7 xl:left-28'/>

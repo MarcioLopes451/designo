@@ -35,15 +35,13 @@ export default function About() {
   }
 
   useEffect(() => {
-    // component is mounted and window is available
     handleWindowResize();
     window.addEventListener('resize', handleWindowResize);
-    // unsubscribe from the event on component unmount
     return () => window.removeEventListener('resize', handleWindowResize);
   }, []);
   
   return (
-    <div className='mt-10'>
+    <div className='flex justify-center items-center flex-col flex-wrap mt-20'>
         <div className='flex justify-center items-center flex-col flex-wrap xl:gap-24'>
             <div className=' xl:flex xl:flex-row-reverse xl:h-[22rem]'>
             {width < breakPoint ? <Image src={MobileAbout} alt='hero'/> 
@@ -85,9 +83,8 @@ export default function About() {
                 </div>
             </div>
             </div>
-            
         </div>
-       
+        <Locations />
         <div className='mt-20'>
             <div className='flex justify-center items-center flex-col flex-wrap xl:flex xl:flex-row-reverse xl:h-[40rem]'>
                {width < breakPoint ? <Image src={Real} alt='real'/> : 
@@ -109,8 +106,8 @@ export default function About() {
                     </div>
                 </div>
             </div>
+            <Talk />
         </div>
-        <Talk />
         {width < breakPoint ? <Footer /> : <TabletFooter />}
     </div>
   )

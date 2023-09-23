@@ -74,7 +74,7 @@ export default function Contact() {
                 </textarea>
                 <br />
                 <div className='flex justify-center items-center mt-4 mb-16 md:justify-end'>
-                <button className='w-40 h-14 bg-white text-black rounded-lg text-center'>
+                <button className='w-40 h-14 bg-white text-black rounded-lg text-center hover:bg-lightPeach hover:text-white'>
                     SUBMIT
                 </button>
                 </div>

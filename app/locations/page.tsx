@@ -33,7 +33,7 @@ export default function Locations() {
   }, []);
     
   return (
-    <div className='mt-10'>
+    <div className='flex justify-center items-center flex-col flex-wrap mt-20'>
        <div className='flex justify-center items-center flex-col flex-wrap gap-10'>
         <div className='xl:flex flex-row-reverse items-center justify-center gap-9'>
             {width < breakPoint ? <Image src={Canada} alt='canada'/> : width >= breakPoint && width < med ?

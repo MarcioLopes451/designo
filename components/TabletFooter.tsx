@@ -12,29 +12,31 @@ export function TabletFooter(){
       <div className='bg-black w-full mt-10'>
         <div className='flex flex-col gap-10 text-white py-10'>
           <div className='w-full'>
-            <div className='flex justify-around'>
+            <div className='flex justify-around items-center'>
+              <Link href='/'>
               <Image src={Logo} alt='/' className='w-48 md:w-36'/>
+              </Link>
               <div className='hidden md:flex gap-6 text-white px-6 font-light tracking-widest text-sm'>
-                <Link href='/'>
+                <Link href='/about'>
                     OUR COMPANY
                 </Link>
-                <Link href='/'>
+                <Link href='/locations'>
                    LOCATIONS
                 </Link>
-                <Link href='/'>
+                <Link href='/contact'>
                     CONTACT
                 </Link>
               </div>
             </div>
           </div>
-          <div className='flex justify-around my-9'>
-            <div className='flex items-center justify-center gap-32'>
-            <div className='flex flex-col justify-center items-center'>
+          <div className='flex my-9 justify-around gap-20 items-end'>
+            <div className='flex items-center justify-center gap-32 opacity-50'>
+            <div className='flex flex-col justify-center items-start'>
             <p>Designo Central Office</p>
-            <p>3886 Wellington Street</p>
-            <p>Toronto, Ontario M9C 3J5</p>
+            <p className='font-light'>3886 Wellington Street</p>
+            <p className='font-light'>Toronto, Ontario M9C 3J5</p>
           </div>
-            <div className='flex flex-col justify-center items-center'>
+            <div className='flex flex-col justify-center items-start'>
             <p>Contact Us (Central Office)</p>
             <p>P : +1 253-863-8967</p>
             <p>M : contact@designo.co</p>

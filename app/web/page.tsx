@@ -41,10 +41,8 @@ export default function Web() {
   }
 
   useEffect(() => {
-    // component is mounted and window is available
     handleWindowResize();
     window.addEventListener('resize', handleWindowResize);
-    // unsubscribe from the event on component unmount
     return () => window.removeEventListener('resize', handleWindowResize);
   }, []);
     
@@ -63,54 +61,54 @@ export default function Web() {
             <div className='flex flex-col justify-center items-center gap-9 xl:flex-row xl:flex-wrap'>
                 <div className='md:flex flex-row items-center justify-center xl:flex-col'>
                     <Image src={Express} alt='express' className='w-80 h-80 rounded-lg md:w-[21.5rem] md:h-[21.5rem]' />
-                    <div className='bg-seashell rounded-lg -mt-4 md:mt-0'>
+                    <div className='bg-seashell  rounded-lg -mt-4 md:mt-0 hover:bg-peach hover:text-white'>
                         <div className='flex flex-col justify-center items-center h-36 md:w-[21.5rem] md:h-[21.5rem] xl:h-44'>
-                            <h1 className='text-peach tracking-widest text-xl'>EXPRESS</h1>
+                            <h1 className='tracking-widest text-xl'>EXPRESS</h1>
                             <p className='text-center w-56 mt-4'>A multi-carrier shipping website for ecommerce businesses</p>
                         </div>
                     </div>
                 </div>
                 <div className='md:flex flex-row items-center justify-center xl:flex-col'>
                     <Image src={Transfer} alt='express' className='w-80 h-80 rounded-lg md:w-[21.5rem] md:h-[21.5rem]' />
-                    <div className='bg-seashell rounded-lg -mt-4 md:mt-0'>
+                    <div className='bg-seashell rounded-lg -mt-4 md:mt-0 hover:bg-peach hover:text-white'>
                         <div className='flex flex-col justify-center items-center h-36 md:w-[21.5rem] md:h-[21.5rem] xl:h-44'>
-                            <h1 className='text-peach tracking-widest text-xl'>TRANSFER</h1>
+                            <h1 className='tracking-widest text-xl'>TRANSFER</h1>
                             <p className='text-center w-56 mt-4'>Site for low-cost money transfers and sending money within seconds</p>
                         </div>
                     </div>
                 </div>
                 <div className='md:flex flex-row items-center justify-center xl:flex-col'>
                     <Image src={Photon} alt='express' className='w-80 h-80 rounded-lg md:w-[21.5rem] md:h-[21.5rem]' />
-                    <div className='bg-seashell rounded-lg -mt-4 md:mt-0'>
+                    <div className='bg-seashell rounded-lg -mt-4 md:mt-0 hover:bg-peach hover:text-white'>
                         <div className='flex flex-col justify-center items-center h-36 md:w-[21.5rem] md:h-[21.5rem] xl:h-44'>
-                            <h1 className='text-peach tracking-widest text-xl'>PHOTON</h1>
+                            <h1 className=' tracking-widest text-xl'>PHOTON</h1>
                             <p className='text-center w-56 mt-4'>A state-of-the-art music player with high-resolution audio and DSP effects</p>
                         </div>
                     </div>
                 </div>
                 <div className='md:flex flex-row items-center justify-center xl:flex-col'>
                     <Image src={Builder} alt='express' className='w-80 h-80 rounded-lg md:w-[21.5rem] md:h-[21.5rem]' />
-                    <div className='bg-seashell rounded-lg -mt-4 md:mt-0'>
+                    <div className='bg-seashell rounded-lg -mt-4 md:mt-0 hover:bg-peach hover:text-white'>
                         <div className='flex flex-col justify-center items-center h-36 md:w-[21.5rem] md:h-[21.5rem] xl:h-44'>
-                            <h1 className='text-peach tracking-widest text-xl'>BUILDER</h1>
+                            <h1 className=' tracking-widest text-xl'>BUILDER</h1>
                             <p className='text-center w-56 mt-4'>Connects users with local contractors based on their location</p>
                         </div>
                     </div>
                 </div>
                 <div className='md:flex flex-row items-center justify-center xl:flex-col'>
                     <Image src={Blogr} alt='express' className='w-80 h-80 rounded-lg md:w-[21.5rem] md:h-[21.5rem]' />
-                    <div className='bg-seashell rounded-lg -mt-4 md:mt-0'>
+                    <div className='bg-seashell rounded-lg -mt-4 md:mt-0 hover:bg-peach hover:text-white'>
                         <div className='flex flex-col justify-center items-center h-36 md:w-[21.5rem] md:h-[21.5rem] xl:h-44'>
-                            <h1 className='text-peach tracking-widest text-xl'>BLOGR</h1>
+                            <h1 className=' tracking-widest text-xl'>BLOGR</h1>
                             <p className='text-center w-56 mt-4'>Blogr is a platform for creating an online blog or publication</p>
                         </div>
                     </div>
                 </div>
                 <div className='md:flex flex-row items-center justify-center xl:flex-col'>
                     <Image src={Camp} alt='express' className='w-80 h-80 rounded-lg md:w-[21.5rem] md:h-[21.5rem]' />
-                    <div className='bg-seashell rounded-lg -mt-4 md:mt-0'>
+                    <div className='bg-seashell rounded-lg -mt-4 md:mt-0 hover:bg-peach hover:text-white'>
                         <div className='flex flex-col justify-center items-center h-36 md:w-[21.5rem] md:h-[21.5rem] xl:h-44'>
-                            <h1 className='text-peach tracking-widest text-xl'>CAMP</h1>
+                            <h1 className=' tracking-widest text-xl'>CAMP</h1>
                             <p className='text-center w-56 mt-4'>Get expert training in coding, data, design, and digital marketing</p>
                         </div>
                     </div>
@@ -124,7 +122,7 @@ export default function Web() {
             <div key={key}>
               <div className='relative'>
               <Image src={data.image} alt='links' className='w-80 h-64 rounded-2xl md:w-[43rem] xl:w-[33rem]'/>
-              <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-2xl'>
+              <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-2xl hover:bg-[#e7816b99]'>
                 <div className='mt-20 flex justify-center flex-col gap-3 items-center'>
                 <h2 className='text-3xl tracking-wide'>{data.Name}</h2>
                 <p className='tracking-widest flex items-center gap-5'>

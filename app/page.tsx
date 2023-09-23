@@ -19,6 +19,7 @@ import { Talk } from '@/components/Talk';
 import { Footer } from '@/components/Footer';
 import { TabletFooter } from '@/components/TabletFooter';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 
 const links = [
@@ -26,6 +27,7 @@ const links = [
     Name:'WEB DESIGN',
     image: Web,
     text:'VIEW PROJECTS',
+    link: '/web'
   },
   {
     Name:'APP DESIGN',
@@ -38,10 +40,6 @@ const links = [
     text:'VIEW PROJECTS',
   },
 ]
-
-const breakPoint = 768;
-    const med = 1024;
-    const large = 1440
 
 export default function Home() {
 
@@ -57,17 +55,15 @@ export default function Home() {
   }
 
   useEffect(() => {
-    // component is mounted and window is available
     handleWindowResize();
     window.addEventListener('resize', handleWindowResize);
-    // unsubscribe from the event on component unmount
     return () => window.removeEventListener('resize', handleWindowResize);
   }, []);
 
   return (
     <main className="mt-9 md:flex flex-col justify-center items-center">
       <div className='text-center pt-20 px-7 text-white relative w-full bg-peach md:w-[43rem] rounded-lg 
-      xl:w-[69rem] xl:flex items-center xl:pt-6 xl:h-[40rem]'>
+      xl:w-[69rem] xl:flex items-center xl:pt-6 xl:h-[30rem]'>
         <div className='xl:ml-10'>
         <h2 className='text-3xl md:text-5xl px-10 xl:px-0 xl:text-left'>
           Award-winning custom designs and digital branding solutions
@@ -77,10 +73,13 @@ export default function Home() {
         responsive websites, app design, and engaging brand experiences. 
         Find out more about our services.
         </p>
+        <Link href='/about'>
         <button className="bg-white text-black w-40 h-14 rounded-lg mt-6 font-medium tracking-wider 
         xl:flex items-center justify-center hover:bg-lightPeach hover:text-white">
           LEARN MORE
         </button>
+        </Link>
+
         </div>
         <Image src={Hero} alt='hero' className='xl:w-[30rem]'/>
       </div>
@@ -94,10 +93,12 @@ export default function Home() {
               <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-2xl hover:bg-[#e7816b99]'>
                 <div className='mt-20 flex justify-center flex-col gap-3 items-center'>
                 <h2 className='text-3xl tracking-wide'>{data.Name}</h2>
+                <Link href='/'>
                 <p className='tracking-widest flex items-center gap-5'>
                   {data.text} 
                   <Image src={Arrow} alt='arrow'/> 
                 </p>
+                </Link>
                 </div>
               </div>
               </div>
@@ -105,6 +106,7 @@ export default function Home() {
           ))}
         </div> : 
         <div className='flex justify-center items-center flex-row flex-wrap gap-10 pt-6'>
+          <Link href='/web'>
           <div className='relative'>
             <Image src={DesktopWeb} alt='web' className='rounded-lg'/>
             <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-lg hover:bg-[#e7816b99]'>
@@ -117,8 +119,10 @@ export default function Home() {
                 </div>
               </div>
           </div>
-
+          </Link>
+         
           <div className='flex flex-col flex-wrap gap-9'>
+            <Link href='/app'>
             <div className='relative'>
             <Image src={App} alt='web' className='rounded-lg w-[33rem] h-[19rem]'/>
             <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-lg hover:bg-[#e7816b99]'>
@@ -131,6 +135,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            </Link>
+
+            <Link href='/graphic'>
             <div className='relative'>
             <Image src={Graphic} alt='web' className='rounded-lg w-[33rem] h-[19rem]'/>
             <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-lg hover:bg-[#e7816b99]'>
@@ -143,6 +150,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            </Link>
           </div>
           </div>}
         </div>

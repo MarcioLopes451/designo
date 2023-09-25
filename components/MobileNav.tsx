@@ -1,10 +1,17 @@
+'use client'
 import Link from "next/link"
+import { useState } from "react";
 
 type Nav = {
     isOpen: boolean
-    onClose: () => void
+    onClose:  () => void
 }
-export default function MobileNav({isOpen}: Nav) {
+export default function MobileNav({isOpen,onClose}: Nav) {
+    const [state, setState] = useState(false);
+
+    function handleClick() {
+      setState(!state)
+    }
     return isOpen ? (
       <div className='absolute top-24 bg-transparent w-full z-50' style={{height:'500px'}}>
           <div className="bg-black py-9">
@@ -21,5 +28,6 @@ export default function MobileNav({isOpen}: Nav) {
              </div>
           </div>
       </div>
-    ) : null
+    ) : <div></div>
   }
+  //() => void

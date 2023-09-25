@@ -11,17 +11,20 @@ import ThreeCircles from '../../assets/shared/desktop/bg-pattern-three-circles.s
 import { Footer } from '@/components/Footer';
 import { TabletFooter } from '@/components/TabletFooter';
 import { Talk } from '@/components/Talk';
+import Link from 'next/link';
 
  const links = [
   {
     Name:'WEB DESIGN',
     image: Web,
     text:'VIEW PROJECTS',
+    link: '/web'
   },
   {
     Name:'APP DESIGN',
     image: App,
     text:'VIEW PROJECTS',
+    link: '/app'
   },
 ]
 
@@ -90,6 +93,7 @@ return (
       <div className='flex justify-center items-center flex-col flex-wrap gap-6 pt-6 xl:flex-row'>
         {links.map((data,key) => (
           <div key={key}>
+            <Link href={data.link}>
             <div className='relative'>
             <Image src={data.image} alt='links' className='w-80 h-64 rounded-2xl md:w-[43rem] xl:w-[33rem]'/>
             <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-2xl hover:bg-[#e7816b99]'>
@@ -102,6 +106,7 @@ return (
               </div>
             </div>
             </div>
+            </Link>
           </div>
         ))}
       </div>

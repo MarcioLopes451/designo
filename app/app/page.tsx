@@ -13,6 +13,7 @@ import ThreeCircles from '../../assets/shared/desktop/bg-pattern-three-circles.s
 import { Footer } from '@/components/Footer';
 import { TabletFooter } from '@/components/TabletFooter';
 import { Talk } from '@/components/Talk';
+import Link from 'next/link';
 
 
 const links = [
@@ -20,11 +21,13 @@ const links = [
     Name:'WEB DESIGN',
     image: Web,
     text:'VIEW PROJECTS',
+    link: '/web'
   },
   {
     Name:'GRAPHIC DESIGN',
     image: Graphic,
     text:'VIEW PROJECTS',
+    link: '/graphic'
   },
 ]
 
@@ -66,7 +69,7 @@ return (
                   <Image src={Airfilter} alt='express' className='w-80 h-80 rounded-lg md:w-[21.5rem] md:h-[21.5rem]' />
                   <div className='bg-seashell rounded-lg -mt-4 md:mt-0 hover:bg-peach hover:text-white'>
                       <div className='flex flex-col justify-center items-center h-36 md:w-[21.5rem] md:h-[21.5rem] xl:h-44'>
-                          <h1 className=' tracking-widest text-xl'>AIRFILTER</h1>
+                          <h1 className='tracking-widest text-xl mt-5'>AIRFILTER</h1>
                           <p className='text-center w-56 mt-4'>Solving the problem of poor indoor air quality by filtering the air</p>
                       </div>
                   </div>
@@ -75,7 +78,7 @@ return (
                   <Image src={Eyecam} alt='express' className='w-80 h-80 rounded-lg md:w-[21.5rem] md:h-[21.5rem]' />
                   <div className='bg-seashell rounded-lg -mt-4 md:mt-0 hover:bg-peach hover:text-white'>
                       <div className='flex flex-col justify-center items-center h-36 md:w-[21.5rem] md:h-[21.5rem] xl:h-44'>
-                          <h1 className=' tracking-widest text-xl'>EYECAM</h1>
+                          <h1 className='tracking-widest text-xl mt-5'>EYECAM</h1>
                           <p className='text-center w-56 mt-4'>Product that lets you edit your favorite photos and videos at any time</p>
                       </div>
                   </div>
@@ -115,6 +118,7 @@ return (
       <div className='flex justify-center items-center flex-col flex-wrap gap-6 pt-6 xl:flex-row'>
         {links.map((data,key) => (
           <div key={key}>
+            <Link href={data.link}>
             <div className='relative'>
             <Image src={data.image} alt='links' className='w-80 h-64 rounded-2xl md:w-[43rem] xl:w-[33rem]'/>
             <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-2xl hover:bg-[#e7816b99]'>
@@ -127,6 +131,7 @@ return (
               </div>
             </div>
             </div>
+            </Link>
           </div>
         ))}
       </div>

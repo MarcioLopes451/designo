@@ -7,6 +7,6 @@ type Nav = {
 
 export default function Backdrop({isOpen, onClose} : Nav) {
   return (
-    <div onClick={onClose} className='fixed z-50 left-0 h-full bg-trans' style={{top:'336px', width:'375px'}}></div>
+    <div onClick={onClose} className='absolute z-50 left-0 h-full bg-trans w-full' style={{top:'336px'}}></div>
   )
 }

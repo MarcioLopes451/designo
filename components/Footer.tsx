@@ -5,16 +5,19 @@ import Twitter from '../assets/shared/desktop/icon-twitter.svg';
 import Pinterest from '../assets/shared/desktop/icon-pinterest.svg';
 import Instagram from '../assets/shared/desktop/icon-instagram.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function Footer(){
     return (
-      <div className='bg-black mt-4 md:w-full'>
+      <div className='bg-black mt-4 w-full'>
         <div className='flex justify-center items-center py-8 flex-col'>
+          <Link href='/'>
           <Image src={Logo} alt='/' className='w-48'/>
+          </Link>
           <div className='flex flex-col justify-center items-center mt-7 border-t-2 border-white gap-8 text-white'>
-            <p className='mt-10'>OUR COMPANY</p>
-            <p>LOCATIONS</p>
-            <p>CONTACT</p>
+            <Link className='mt-10' href='/about'>OUR COMPANY</Link>
+            <Link href='/locations'>LOCATIONS</Link>
+            <Link href='/contact'>CONTACT</Link>
             <div className='flex flex-col justify-center items-center'>
               <p>Designo Central Office</p>
               <p>3886 Wellington Street</p>

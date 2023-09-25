@@ -3,7 +3,7 @@ import Link from "next/link";
 export function Talk(){
     return (
       <div className='mt-20 flex justify-center items-center bg-peach flex-col rounded-lg'>
-      <div className='relative w-80 h-96 flex justify-center items-center
+      <div className='relative w-full h-96 flex justify-center items-center
        text-white flex-col md:w-[43rem] md:h-80 xl:w-[69rem]'>
         <h2 className='text-4xl text-center px-10 md:px-56'>Let’s talk about your project</h2>
         <p className='px-4 text-center mt-4 md:w-[32rem]'>

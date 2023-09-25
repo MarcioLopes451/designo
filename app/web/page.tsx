@@ -14,17 +14,20 @@ import ThreeCircles from '../../assets/shared/desktop/bg-pattern-three-circles.s
 import { Footer } from '@/components/Footer';
 import { TabletFooter } from '@/components/TabletFooter';
 import { Talk } from '@/components/Talk';
+import Link from 'next/link';
 
 const links = [
     {
       Name:'APP DESIGN',
       image: App,
       text:'VIEW PROJECTS',
+      link: '/app'
     },
     {
       Name:'GRAPHIC DESIGN',
       image: Graphic,
       text:'VIEW PROJECTS',
+      link: '/graphic'
     },
   ]
 
@@ -72,7 +75,7 @@ export default function Web() {
                     <Image src={Transfer} alt='express' className='w-80 h-80 rounded-lg md:w-[21.5rem] md:h-[21.5rem]' />
                     <div className='bg-seashell rounded-lg -mt-4 md:mt-0 hover:bg-peach hover:text-white'>
                         <div className='flex flex-col justify-center items-center h-36 md:w-[21.5rem] md:h-[21.5rem] xl:h-44'>
-                            <h1 className='tracking-widest text-xl'>TRANSFER</h1>
+                            <h1 className='tracking-widest text-xl mt-5'>TRANSFER</h1>
                             <p className='text-center w-56 mt-4'>Site for low-cost money transfers and sending money within seconds</p>
                         </div>
                     </div>
@@ -81,7 +84,7 @@ export default function Web() {
                     <Image src={Photon} alt='express' className='w-80 h-80 rounded-lg md:w-[21.5rem] md:h-[21.5rem]' />
                     <div className='bg-seashell rounded-lg -mt-4 md:mt-0 hover:bg-peach hover:text-white'>
                         <div className='flex flex-col justify-center items-center h-36 md:w-[21.5rem] md:h-[21.5rem] xl:h-44'>
-                            <h1 className=' tracking-widest text-xl'>PHOTON</h1>
+                            <h1 className=' tracking-widest text-xl mt-5'>PHOTON</h1>
                             <p className='text-center w-56 mt-4'>A state-of-the-art music player with high-resolution audio and DSP effects</p>
                         </div>
                     </div>
@@ -90,7 +93,7 @@ export default function Web() {
                     <Image src={Builder} alt='express' className='w-80 h-80 rounded-lg md:w-[21.5rem] md:h-[21.5rem]' />
                     <div className='bg-seashell rounded-lg -mt-4 md:mt-0 hover:bg-peach hover:text-white'>
                         <div className='flex flex-col justify-center items-center h-36 md:w-[21.5rem] md:h-[21.5rem] xl:h-44'>
-                            <h1 className=' tracking-widest text-xl'>BUILDER</h1>
+                            <h1 className=' tracking-widest text-xl mt-5'>BUILDER</h1>
                             <p className='text-center w-56 mt-4'>Connects users with local contractors based on their location</p>
                         </div>
                     </div>
@@ -108,7 +111,7 @@ export default function Web() {
                     <Image src={Camp} alt='express' className='w-80 h-80 rounded-lg md:w-[21.5rem] md:h-[21.5rem]' />
                     <div className='bg-seashell rounded-lg -mt-4 md:mt-0 hover:bg-peach hover:text-white'>
                         <div className='flex flex-col justify-center items-center h-36 md:w-[21.5rem] md:h-[21.5rem] xl:h-44'>
-                            <h1 className=' tracking-widest text-xl'>CAMP</h1>
+                            <h1 className=' tracking-widest text-xl mt-5'>CAMP</h1>
                             <p className='text-center w-56 mt-4'>Get expert training in coding, data, design, and digital marketing</p>
                         </div>
                     </div>
@@ -120,6 +123,7 @@ export default function Web() {
         <div className='flex justify-center items-center flex-col flex-wrap gap-6 pt-6 xl:flex-row'>
           {links.map((data,key) => (
             <div key={key}>
+              <Link href={data.link}>
               <div className='relative'>
               <Image src={data.image} alt='links' className='w-80 h-64 rounded-2xl md:w-[43rem] xl:w-[33rem]'/>
               <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-2xl hover:bg-[#e7816b99]'>
@@ -132,6 +136,7 @@ export default function Web() {
                 </div>
               </div>
               </div>
+              </Link>
             </div>
           ))}
         </div>

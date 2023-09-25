@@ -33,11 +33,13 @@ const links = [
     Name:'APP DESIGN',
     image: App,
     text:'VIEW PROJECTS',
+    link: '/app'
   },
   {
     Name:'GRAPHIC DESIGN',
     image: Graphic,
     text:'VIEW PROJECTS',
+    link: '/graphic'
   },
 ]
 
@@ -87,22 +89,23 @@ export default function Home() {
 
        {width < large ? <div className='flex justify-center items-center flex-col flex-wrap gap-6 pt-6'>
           {links.map((data,key) => (
-            <div key={key}>
-              <div className='relative'>
-              <Image src={data.image} alt='links' className='w-80 h-64 rounded-2xl md:w-[43rem]'/>
-              <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-2xl hover:bg-[#e7816b99]'>
-                <div className='mt-20 flex justify-center flex-col gap-3 items-center'>
-                <h2 className='text-3xl tracking-wide'>{data.Name}</h2>
-                <Link href='/'>
-                <p className='tracking-widest flex items-center gap-5'>
-                  {data.text} 
-                  <Image src={Arrow} alt='arrow'/> 
-                </p>
-                </Link>
-                </div>
-              </div>
-              </div>
-            </div>
+             <div key={key}>
+              <Link href={data.link}>
+             <div className='relative'>
+             <Image src={data.image} alt='links' className='w-80 h-64 rounded-2xl md:w-[43rem]'/>
+             <div className='absolute top-0 left-0 text-white bg-trans w-full h-full rounded-2xl hover:bg-[#e7816b99]'>
+               <div className='mt-20 flex justify-center flex-col gap-3 items-center'>
+               <h2 className='text-3xl tracking-wide'>{data.Name}</h2>
+               <p className='tracking-widest flex items-center gap-5'>
+                 {data.text} 
+                 <Image src={Arrow} alt='arrow'/> 
+               </p>
+               </div>
+             </div>
+             </div>
+             </Link>
+           </div>
+           
           ))}
         </div> : 
         <div className='flex justify-center items-center flex-row flex-wrap gap-10 pt-6'>

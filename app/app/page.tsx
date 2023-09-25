@@ -64,7 +64,8 @@ return (
       </div>
 
       <div className='mt-7'>
-          <div className='flex flex-col justify-center items-center gap-9 xl:flex-row  xl:justify-items-start xl:flex-wrap'>
+          <div className='flex flex-col justify-center items-center gap-9 
+          xl:flex-row xl:flex-wrap xl:w-[69rem] xl:justify-start'>
               <div className='md:flex flex-row items-center justify-center xl:flex-col'>
                   <Image src={Airfilter} alt='express' className='w-80 h-80 rounded-lg md:w-[21.5rem] md:h-[21.5rem]' />
                   <div className='bg-seashell rounded-lg -mt-4 md:mt-0 hover:bg-peach hover:text-white'>

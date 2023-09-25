@@ -45,7 +45,7 @@ export default function About() {
         <div className='flex justify-center items-center flex-col flex-wrap xl:gap-24'>
             <div className=' xl:flex xl:flex-row-reverse xl:h-[22rem]'>
             {width < breakPoint ? <Image src={MobileAbout} alt='hero' className='w-full'/> 
-            :width >= breakPoint && width < med ? <Image src={TabletAbout} alt='tablet' className='w-[43rem] rounded-lg'/> 
+            :width >= breakPoint && width < large ? <Image src={TabletAbout} alt='tablet' className='w-[43rem] rounded-lg'/> 
             : <Image src={DesktopAbout} alt='hero' className='w-[27rem] rounded-lg'/> }
             <div className='bg-peach w-full md:w-[43rem] md:rounded-lg xl:mt-0 xl:w-[41rem]'>
                 <div className='flex justify-center items-center flex-col text-center text-white py-10
@@ -63,7 +63,7 @@ export default function About() {
             </div>
             <div className='xl:flex flex-row h-[40rem]'>
             {width < breakPoint ? <Image src={Talent} alt='talent' className='w-full'/> : 
-            width >= breakPoint && width < med ? <Image src={TabletTalent} alt='tablet' className='mt-20 rounded-lg w-[43rem]'/> 
+            width >= breakPoint && width < large ? <Image src={TabletTalent} alt='tablet' className='mt-20 rounded-lg w-[43rem]'/> 
             :<Image src={DesktopTalent} alt='talent' className='w-[28rem] rounded-lg'/>}
             <div className='bg-seashell md:w-[43rem] rounded-lg 
             xl:mt-0 xl:w-[41rem] xl:flex xl:items-center xl:justify-center'>
@@ -88,7 +88,7 @@ export default function About() {
         <div className='mt-20'>
             <div className='flex justify-center items-center flex-col flex-wrap xl:flex xl:flex-row-reverse xl:h-[40rem]'>
                {width < breakPoint ? <Image src={Real} alt='real' className='w-full'/> : 
-               width >= breakPoint && width < med ? <Image src={TabletReal} alt='tablet' className='mt-20 rounded-lg w-[43rem]'/> 
+               width >= breakPoint && width < large ? <Image src={TabletReal} alt='tablet' className='mt-20 rounded-lg w-[43rem]'/> 
                :<Image src={DesktopReal} alt='real'/>}
                 <div className='bg-seashell md:w-[43rem] -mt-3 rounded-lg xl:h-[40rem] xl:mt-0 xl:flex justify-center items-center'>
                     <div className='flex justify-center items-center flex-col flex-wrap text-center my-16 

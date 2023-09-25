@@ -36,7 +36,7 @@ export default function Locations() {
     <div className='flex justify-center items-center flex-col flex-wrap mt-20'>
        <div className='flex justify-center items-center flex-col flex-wrap gap-10'>
         <div className='xl:flex flex-row-reverse items-center justify-center gap-9'>
-            {width < breakPoint ? <Image src={Canada} alt='canada'/> : width >= breakPoint && width < med ?
+            {width < breakPoint ? <Image src={Canada} alt='canada'/> : width >= breakPoint && width < large ?
             <Image src={TabletCanada} alt='tab' className='rounded-lg'/> :  <Image src={Canada} alt='canada' className='h-80 rounded-lg'/>}
             <div className='bg-seashell w-full md:mt-10 rounded-lg xl:mt-0 xl:w-[45rem] xl:h-80'>
                 <div className='flex flex-col items-center justify-center md:items-start px-16'>
@@ -55,7 +55,7 @@ export default function Locations() {
         </div>
 
         <div className='xl:flex flex-row items-center justify-center gap-9'>
-            {width < breakPoint ? <Image src={Australia} alt='Australia'/> : width >= breakPoint && width < med ?
+            {width < breakPoint ? <Image src={Australia} alt='Australia'/> : width >= breakPoint && width < large ?
              <Image src={TabletAustralia} alt='tab'/> : <Image src={Australia} alt='Australia' className='h-80 rounded-lg'/> }
             <div className='bg-seashell w-full xl:mt-0 xl:w-[45rem] xl:h-80 rounded-lg'>
             <div className='flex flex-col items-center justify-center md:items-start px-16 md:mt-10'>
@@ -73,7 +73,7 @@ export default function Locations() {
         </div>
         </div>
         <div className='xl:flex flex-row-reverse items-center justify-center gap-9'>
-           {width < breakPoint ? <Image src={Uk} alt='uk'/> :  width >= breakPoint && width < med ?
+           {width < breakPoint ? <Image src={Uk} alt='uk'/> :  width >= breakPoint && width < large ?
             <Image src={TabletUk} alt='tab'/> : <Image src={Uk} alt='uk' className='h-80 rounded-lg'/>}
             <div className='bg-seashell w-full xl:mt-0 xl:w-[45rem] xl:h-80 rounded-lg'>
             <div className='flex flex-col items-center justify-center md:items-start px-16 md:mt-10'>

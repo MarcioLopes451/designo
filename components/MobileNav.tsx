@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { useState } from "react";
 
+
 type Nav = {
     isOpen: boolean
     onClose:  () => void
@@ -28,6 +29,6 @@ export default function MobileNav({isOpen,onClose}: Nav) {
              </div>
           </div>
       </div>
-    ) : <div></div>
+    ) : null
   }
-  //() => void
+  
